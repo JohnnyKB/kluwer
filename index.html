@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,34 +17,80 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-		.coco {
-			background-color: red;
-		}
-    </style>
   </head>
   <body>
-    <h1>AsesoresTV.com</h1>
-	<div class="container" style="height: 100px;">
+	<header class="container header">
 		<div class="row">
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
-			<div class="col-md-1"><div class="coco">hello</div></div>
+			<div class="col-md-3">
+				<img src="img/wk_header_logo.png" alt="Wolters Kluwer" class="v-center p0">
+			</div>
+			<div class="col-md-6 text-center">
+				<div class="logo-tagline vh-center">
+					<img src="img/atv_logo.png" alt="AsesoresTV.com">
+					<p>La televisión de la asesoría y del despacho profesional</p>
+				</div>
+			</div>
+			<div class="col-md-2 col-md-offset-1">
+				<div class="user-controls v-center">
+					<img src="img/icon_user.png" alt="User Profile Image">
+					<span class="user-controls__username">
+						<strong>Alfredo Muñoz</strong>
+					</span>
+					<ul class="user-controls__buttons">
+						<li>perfil</li>
+						<li>cerrar sesión</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="hello" style="background-color: #f00; width: 1024px; height: 10px;">h</div>
-	</div>
+	</header>
+	<nav class="topnav">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 p0">
+					 <ul class="topnav__social">
+					 	<li class="topnav__social__item">
+					 		<a class="social__icon i-twitter" href=""></a>
+					 	</li>
+					 	<li class="topnav__social__item">
+					 		<a class="social__icon i-facebook" href=""></a>
+					 	</li>
+					 	<li class="topnav__social__item">
+					 		<a class="social__icon i-linkedin" href=""></a>
+					 	</li>
+					 	<li class="topnav__social__item">
+					 		<a class="social__icon i-gplus" href=""></a>
+					 	</li>
+					 </ul>
+				</div>
+				<div class="col-md-6 text-center">
+					<ul class="topnav__menu">
+						<li class="topnav__menu-unit">
+							<span class="topnav__menu__item">Opinión</span>
+						</li>
+						<li class="topnav__menu-unit">
+							<span class="topnav__menu__item">Laboral</span>
+						</li>
+						<li class="topnav__menu-unit">
+							<span class="topnav__menu__item">Fiscal</span>
+						</li>
+						<li class="topnav__menu-unit">
+							<span class="topnav__menu__item">Contable</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<div class="topnav__search">
+						<div class="search__icon">
+							<img src="img/icon_lupa.png" alt="Search">
+						</div>
+						<input class="search__input" type="text">
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

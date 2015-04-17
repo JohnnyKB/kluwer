@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Auxiliary classes
+   ========================================================================== */
+
+.topnav div[class^="col-"] {
+	/*background-color: rgba(255,255,255,0.05);*/
+	/*border:1px solid red;*/
+}
+
+.v-center {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.vh-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+strong {
+	font-family: 'ConduitBold', sans-serif;
+}
+
+/* aux class to override bootstraps default padding */
+.p0 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'ConduitLight';
+    src: url('../fonts/conduititcttlight-webfont.eot');
+    src: url('../fonts/conduititcttlight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/conduititcttlight-webfont.woff2') format('woff2'),
+         url('../fonts/conduititcttlight-webfont.woff') format('woff'),
+         url('../fonts/conduititcttlight-webfont.ttf') format('truetype'),
+         url('../fonts/conduititcttlight-webfont.svg#ConduitLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ConduitBold';
+    src: url('../fonts/conduititcttbold-webfont.eot');
+    src: url('../fonts/conduititcttbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/conduititcttbold-webfont.woff2') format('woff2'),
+         url('../fonts/conduititcttbold-webfont.woff') format('woff'),
+         url('../fonts/conduititcttbold-webfont.ttf') format('truetype'),
+         url('../fonts/conduititcttbold-webfont.svg#ConduitBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Website header
+   ========================================================================== */
+
+.header div[class^="col-"] {
+	height: 137px;
+}
+
+.header p {
+	font-size: 1.25em;
+	text-transform: uppercase;
+	font-family: 'ConduitLight', sans-serif;
+}
+
+.user-controls__username {
+	font-size: 1.2em;
+	margin-left: 10px;
+}
+
+.user-controls__buttons {
+	margin: 0;
+	padding: 0;
+}
+
+.user-controls__buttons li {
+	display: inline;
+	margin-left: 10px;
+	font-size: 1.1em;
+	font-family: 'ConduitLight', sans-serif;
+	cursor: pointer;
+}
+
+.logo-tagline {
+	min-width: 100%;
+}
+
+/* ==========================================================================
+   Navbar 
+   ========================================================================== */
+
+.topnav {
+	background-color: #2b353f;
+	height: 57px;
+}
+
+.topnav__menu {
+	padding: 0;
+	margin: 0;
+}
+
+.topnav__menu-unit {
+	display: inline-block;
+	height: 57px;
+	width: 109px;
+	text-align: center;
+	transition: all 0.15s;
+	cursor: pointer;
+}
+
+.topnav__menu-unit:hover {
+	background-color: #20282f;
+}
+
+.topnav__menu-unit:hover .topnav__menu__item {
+	color: #e7e7e7;
+}
+
+.topnav__menu__item {
+	color: #a9a9a9;
+	line-height: 57px;
+	font-family: 'Helvetica Neue Medium', 'Helvetica Medium', sans-serif;
+}
+
+.search__input {
+	width: 219px;
+	height: 34px;
+	background-color: #20282f;
+	border-radius: 50px;
+	color: #fff;
+	border: none;
+	margin-top: 11px;
+	transition: all 0.15s;
+	padding: 0 15px 0 38px;
+}
+
+.search__input:focus {
+	outline: 0;
+	box-shadow: 0px 0px 5px rgba(255,255,255,0.4);
+}
+
+.search__icon {
+	position: absolute;
+	margin-top: 18px;
+	margin-left: 12px;
+}
+
+.topnav__social__item {
+	display: inline-block;
+	width: 33px;
+	height: 33;
+}
+
+.topnav__social {
+	margin-top: 12px;
+}
+
+.social__icon {
+	height: 33px;
+	width: 33px;
+	display: block;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	transition: all 0.15s;
+}
+
+.social__icon:hover {
+	opacity: 1;
+}
+
+.i-twitter {
+	background-image: url('../img/icon_rs_twitter.png');
+}
+
+.i-facebook {
+	background-image: url('../img/icon_rs_facebook.png');
+}
+
+.i-linkedin {
+	background-image: url('../img/icon_rs_linkedin.png');
+}
+
+.i-gplus {
+	background-image: url('../img/icon_rs_gplus.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
