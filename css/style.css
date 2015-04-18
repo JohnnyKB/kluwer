@@ -1,13 +1,21 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   Auxiliary classes
+   DEBUGGING
    ========================================================================== */
 
 .topnav div[class^="col-"] {
 	/*background-color: rgba(255,255,255,0.05);*/
 	/*border:1px solid red;*/
 }
+
+.asd {
+	background-color: rgba(255,0,0,0.2);
+}
+
+/* ==========================================================================
+   Auxiliary classes
+   ========================================================================== */
 
 .v-center {
 	position: absolute;
@@ -24,8 +32,25 @@
 	transform: translate(-50%, -50%);
 }
 
+.parent-tc {
+	text-align: center;
+}
+
+.parent-tc:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.child-tc {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 strong {
-	font-family: 'ConduitBold', sans-serif;
+	font-family: 'ConduitBold', sans-serif !important;
 }
 
 /* aux class to override bootstraps default padding */
@@ -70,7 +95,7 @@ strong {
 	height: 137px;
 }
 
-.header p {
+.header__tagline {
 	font-size: 1.25em;
 	text-transform: uppercase;
 	font-family: 'ConduitLight', sans-serif;
@@ -96,6 +121,7 @@ strong {
 
 .logo-tagline {
 	min-width: 100%;
+	/*height: 137px;*/
 }
 
 /* ==========================================================================
@@ -162,6 +188,8 @@ strong {
 	display: inline-block;
 	width: 33px;
 	height: 33;
+	margin-right: 4px;
+	border-radius: 50%;
 }
 
 .topnav__social {
@@ -173,7 +201,7 @@ strong {
 	width: 33px;
 	display: block;
 	background-repeat: no-repeat;
-	opacity: 0.5;
+	opacity: 0.4;
 	transition: all 0.15s;
 }
 
@@ -197,15 +225,83 @@ strong {
 	background-image: url('../img/icon_rs_gplus.png');
 }
 
+/* ==========================================================================
+   Barra de registro
+   ========================================================================== */
 
+.register {
+	background-color: #03a0d7;
+	height: 96px;
+	position: relative;
+}
 
+.register__icon {
+	background-image: url('../img/icon_info.png');
+	width: 48px;
+	height: 48px;
+	margin-top: 24px;
+}
 
+.register__text {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'ConduitLight', sans-serif;
+	margin-top: 23px;
+	font-size: 1.25em;
+}
 
+.register__button {
+	width: 202px;
+	height: 50px;
+	background-color: #2b353f;
+	border-radius: 4px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 23px;
+	border: 0;
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.1em;
+}
 
+.register__button:hover {
+	background-color: #20282f;
+}
 
+.register__close {
+	background-image: url('../img/icon_close.png');
+	width: 29px;
+	height: 28px;
+	margin-top: 34px;
+	opacity: 0.2;
+	cursor: pointer;
+	transition: all 0.15s;
+}
 
+.register__close:hover {
+	opacity: 0.3;
+}
 
+/* ==========================================================================
+   Video principal
+   ========================================================================== */
 
+.main-video {
+	height: 514px;
+	background-color: #000;
+	position: relative;
+}
+
+.l-grad {
+	position: absolute;
+	height: 100%;
+	width: 100px;
+	background-image:
+    linear-gradient(
+      to right, 
+      #fff, rgba(0,0,0,0)
+    );
+}
 
 
 
