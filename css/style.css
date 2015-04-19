@@ -420,6 +420,9 @@ strong.conduit {
 	background-image: url('../img/icon_thvideo_play.png');
 	position: absolute;
 	opacity: 0;
+	top: 50%;
+	left: 50%;
+	margin: -15px 0 0 -15px;
 }
 
 .more-videos__item * {
@@ -432,6 +435,9 @@ strong.conduit {
 	overflow: hidden;
 	text-align: center;
 	margin-bottom: 10px;
+	border: 1px solid transparent;
+	position: relative;
+	cursor: pointer;
 }  
 
 .more-videos__item__image img {
@@ -445,9 +451,11 @@ strong.conduit {
 	text-transform: uppercase;
 	line-height: 1.1;
 	font-size: 1em; 
+	cursor: pointer;
 }
 
-.more-videos__item.active .more-videos__item__image {
+.more-videos__item.active .more-videos__item__image,
+.more-videos__item:hover .more-videos__item__image {
 	border: 1px solid #fff;
 }
 
