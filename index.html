@@ -34,7 +34,7 @@
 				<div class="user-controls v-center">
 					<img src="img/icon_user.png" alt="User Profile Image">
 					<span class="user-controls__username">
-						<strong>Alfredo Muñoz</strong>
+						<strong class="conduit">Alfredo Muñoz</strong>
 					</span>
 					<ul class="user-controls__buttons">
 						<li>perfil</li>
@@ -84,7 +84,7 @@
 						<div class="search__icon">
 							<img src="img/icon_lupa.png" alt="Search">
 						</div>
-						<input class="search__input" type="text">
+						<input class="search__input" type="text" placeholder="Buscar en asesorestv">
 					</div>
 				</div>
 			</div>
@@ -112,8 +112,56 @@
 		</div>
 	</div>
 	<div class="main-video">
-		<div class="container">
+		<div class="container p0">
 			<div class="l-grad"></div>
+			<div class="r-grad"></div>
+			<div class="imagen">
+				<img src="img/th_bartolome.jpg" alt="pavo">
+			</div>
+			
+			<div class="col-md-6 col-md-offset-6">
+				<div class="main-video__info">
+					<div class="main-video__author">Bartolomé Borrego Zabala</div>
+					<div class="main-video__title">Gestión de las Notificaciones Electrónicas Obligatorias como Camino a la Excelencia</div>
+					<div class="main-video__duration">3'10"</div>
+					<div class="main-video__date">24 de octubre, 2014</div>
+					<a class="main-video__play">
+						<img src="img/icon_mainvideo_play.png" alt="Play">Ver ahora
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="more-videos">
+		<div class="container">
+			<div class="col-md-3 more-videos__item active">
+				<div class="more-videos__item__image">
+					<div class="more-videos__item__play vh-center"></div>
+					<img src="img/vid_th_1.jpg" alt="" class="">
+				</div>
+				<p class="more-videos__item__text">Gestión de las notificaciones electrónicas obligatorias como camino de la excelencia</p>
+			</div>
+			<div class="col-md-3 more-videos__item">
+				<div class="more-videos__item__play vh-center"></div>
+				<div class="more-videos__item__image">
+					<img src="img/vid_th_2.jpg" alt="" class="">
+				</div>
+				<p class="more-videos__item__text">novedades fiscales 2015</p>
+			</div>
+			<div class="col-md-3 more-videos__item">
+				<div class="more-videos__item__play vh-center"></div>
+				<div class="more-videos__item__image">
+					<img src="img/vid_th_3.jpg" alt="" class="">
+				</div>
+				<p class="more-videos__item__text">medidas para frenar el desempleo juvenil</p>
+			</div>
+			<div class="col-md-3 more-videos__item">
+				<div class="more-videos__item__play vh-center"></div>
+				<div class="more-videos__item__image">
+					<img src="img/vid_th_4.jpg" alt="" class="">
+				</div>
+				<p class="more-videos__item__text">empresas y profesionales. cambios contables</p>
+			</div>
 		</div>
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -123,6 +171,7 @@
 		// 	$('.register').slideUp(150);
 		// },1000);
 	</script>
+	<script src="//localhost:35729/livereload.js"></script>
   </body>
 </html>
 
