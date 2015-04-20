@@ -5,7 +5,10 @@ module.exports = function(grunt) {
         // pkg: grunt.file.readJSON('package.json'),
         browserSync: {
             files: {
-                src : 'css/style.css'
+                src : [
+                    'css/style.css',
+                    'index.html'
+                ],
             },
             options: {
               server: {
