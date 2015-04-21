@@ -8,7 +8,7 @@
     <title>AsesoresTV.com</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,8 +21,8 @@
   <body>
 	<header class="container header">
 		<div class="row">
-			<div class="col-md-3 p0">
-				<img src="img/wk_header_logo.png" alt="Wolters Kluwer" class="v-center">
+			<div class="col-md-3 p0 hidden-sm">
+				<img src="img/wk_header_logo.png" alt="Wolters Kluwer" class="wk-logo v-center">
 			</div>
 			<div class="col-md-6 text-center">
 				<div class="logo-tagline vh-center">
@@ -30,7 +30,7 @@
 					<p class="header__tagline">La televisión de la asesoría y del despacho profesional</p>
 				</div>
 			</div>
-			<div class="col-md-2 col-md-offset-1">
+			<div class="col-md-2 col-md-offset-1 hidden-sm">
 				<div class="user-controls v-center">
 					<img src="img/icon_user.png" alt="User Profile Image">
 					<span class="user-controls__username">
@@ -111,21 +111,23 @@
 			</div>
 		</div>
 	</div>
-	<div class="main-video">
+	<div class="mvideo">
+		<div class="mvideo__image-responsive hidden-lg"></div>
+		<div class="b-grad hidden-lg"></div>
 		<div class="container p0">
 			<div class="row">
 				<div class="l-grad"></div>
 				<div class="r-grad"></div>
-				<div class="imagen">
-					<img src="img/th_bartolome.jpg" alt="pavo">
+				<div class="mvideo__image hidden-sm">
+					<img src="img/th_bartolome.jpg" alt="Bartolomé">
 				</div>
-				<div class="col-md-6 col-md-offset-6">
-					<div class="main-video__info">
-						<div class="main-video__author">Bartolomé Borrego Zabala</div>
-						<div class="main-video__title">Gestión de las Notificaciones Electrónicas Obligatorias como Camino a la Excelencia</div>
-						<div class="main-video__duration">3'10"</div>
-						<div class="main-video__date">24 de octubre, 2014</div>
-						<a class="main-video__play">
+				<div class="col-md-6 col-md-offset-6 col-sm-10 col-sm-offset-1">
+					<div class="mvideo__info">
+						<div class="mvideo__author">Bartolomé Borrego Zabala</div>
+						<div class="mvideo__title">Gestión de las Notificaciones Electrónicas Obligatorias como Camino a la Excelencia</div>
+						<div class="mvideo__duration">3'10"</div>
+						<div class="mvideo__date">24 de octubre, 2014</div>
+						<a class="mvideo__play">
 							<img src="img/icon_mainvideo_play.png" alt="Play">Ver ahora
 						</a>
 					</div>
@@ -171,11 +173,11 @@
 		<div class="container">
 			<h1 class="video__title">Mejor Valorados</h1>
 			<div class="row">
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
-						<div class="video__item__meta">
+						<div class="video__item__meta hidden-sm">
 							<div class="video__icon i-time"></div> 2:30
 							<div class="video__icon i-rating"></div> 3,4
 							<div class="video__icon i-comments"></div> 10
@@ -185,16 +187,31 @@
 						</div>
 						<img src="img/topv_th_1.jpg" alt="">
 					</div>
-					<p class="video__item__title">Prevención del blanqueo de capitales</p>
-					<div class="video__item__author">por <strong class="conduit">Javier Frutos</strong></div>
-					<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
-					<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
+					<p class="video__item__title hidden-sm">Prevención del blanqueo de capitales</p>
+					<div class="video__item__author hidden-sm">por <strong class="conduit">Javier Frutos</strong></div>
+					<div class="video__item__date hidden-sm">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+					<div class="video__item__tags hidden-sm">FISCAL, AUTÓNOMOS</div>
 				</div>
-				<div class="col-md-4 video__item">
+				<!-- mobile -->
+				<div class="col-sm-7 hidden-lg">
+					<div class="v--mobile video__item">
+						<div class="video__item__meta">
+							<div class="video__icon i-time dark"></div> 2:30
+							<div class="video__icon i-rating dark"></div> 3,4
+							<div class="video__icon i-comments dark"></div> 10
+						</div>
+						<p class="video__item__title">Prevención del blanqueo de capitales</p>
+						<div class="video__item__author">por <strong class="conduit">Javier Frutos</strong></div>
+						<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+						<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
+					</div>
+				</div>
+				<!-- endmobile -->
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
-						<div class="video__item__meta">
+						<div class="video__item__meta hidden-sm">
 							<div class="video__icon i-time"></div> 2:30
 							<div class="video__icon i-rating"></div> 3,4
 							<div class="video__icon i-comments"></div> 10
@@ -204,11 +221,26 @@
 						</div>
 						<img src="img/topv_th_2.jpg" alt="">
 					</div>
-					<p class="video__item__title">Medidas para frenar el desempleo juvenil</p>
-					<div class="video__item__author">por <strong class="conduit">Alfredo Muñoz</strong></div>
-					<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
-					<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
+					<p class="video__item__title hidden-sm">Medidas para frenar el desempleo juvenil</p>
+					<div class="video__item__author hidden-sm">por <strong class="conduit">Alfredo Muñoz</strong></div>
+					<div class="video__item__date hidden-sm">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+					<div class="video__item__tags hidden-sm">FISCAL, AUTÓNOMOS</div>
 				</div>
+				<!-- mobile -->
+				<div class="col-sm-7 hidden-lg">
+					<div class="v--mobile video__item">
+						<div class="video__item__meta">
+							<div class="video__icon i-time dark"></div> 2:30
+							<div class="video__icon i-rating dark"></div> 3,4
+							<div class="video__icon i-comments dark"></div> 10
+						</div>
+						<p class="video__item__title">Medidas para frenar el desempleo juvenil</p>
+						<div class="video__item__author">por <strong class="conduit">Alfredo Muñoz</strong></div>
+						<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+						<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
+					</div>
+				</div>
+				<!-- endmobile -->
 				<div class="col-md-4 advert"></div>
 			</div>
 		</div>
@@ -217,7 +249,7 @@
 		<div class="container">
 			<h1 class="video__title">FORO ASESORES 2014</h1>
 			<div class="row">
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
@@ -236,7 +268,7 @@
 					<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
 					<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
 				</div>
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
@@ -255,7 +287,7 @@
 					<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
 					<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
 				</div>
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
@@ -277,11 +309,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="foro14 video__section">
+	<div class="video__section">
 		<div class="container">
 			<h1 class="video__title">OTRA SECCIÓN</h1>
 			<div class="row">
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
@@ -300,7 +332,7 @@
 					<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
 					<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
 				</div>
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
@@ -319,7 +351,7 @@
 					<div class="video__item__date">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
 					<div class="video__item__tags">FISCAL, AUTÓNOMOS</div>
 				</div>
-				<div class="col-md-4 video__item">
+				<div class="col-md-4 video__item col-sm-5">
 					<div class="video__item__image">
 						<div class="video__item__play"></div>
 						<div class="video__item__overlay"></div>
@@ -365,19 +397,19 @@
 		<div class="container">
 			<div class="row">
 				<h3 class="about__title">¿QUÉ ES <strong>ASESORESTV</strong>?</h3>
-				<div class="col-md-3 about__item">
+				<div class="col-md-3 col-sm-6 about__item">
 					<img src="img/about_1.png" alt="" class="about__item__image">
 					<p class="about__item__text">1500+ VÍDEOS DE EXPERTOS</p>
 				</div>
-				<div class="col-md-3 about__item">
+				<div class="col-md-3 col-sm-6 about__item">
 					<img src="img/about_2.png" alt="" class="about__item__image">
 					<p class="about__item__text">RETRANSMISIONES EN VIVO</p>
 				</div>
-				<div class="col-md-3 about__item">
+				<div class="col-md-3 col-sm-6 about__item">
 					<img src="img/about_3.png" alt="" class="about__item__image">
 					<p class="about__item__text">COLABORA Y MEJORA EL CONTENIDO</p>
 				</div>
-				<div class="col-md-3 about__item">
+				<div class="col-md-3 col-sm-6 about__item">
 					<img src="img/about_4.png" alt="" class="about__item__image">
 					<p class="about__item__text">EXPERIENCIA MULTIPLATAFORMAS</p>
 				</div>
@@ -418,7 +450,7 @@
 				</div>
 				<div class="col-md-3">
 					<div class="footer__section">
-						<h5 class="footer__section__title">Solucoines para Despachos Profesionales</h5>
+						<h5 class="footer__section__title">Soluciones para Despachos Profesionales</h5>
 						<ul class="footer__section__list">
 							<li class="footer__section__item">
 								<a class="item__link" href="#">Estimación, Contabilidad e IVA</a>

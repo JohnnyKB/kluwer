@@ -7,7 +7,8 @@ module.exports = function(grunt) {
             files: {
                 src : [
                     'css/style.css',
-                    'index.html'
+                    'index.html',
+                    'css/bootstrap.css'
                 ],
             },
             options: {
