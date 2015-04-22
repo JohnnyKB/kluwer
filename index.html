@@ -673,17 +673,28 @@
 	</footer>
 	</div>
 	<nav id="off-menu">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="#">About us</a>
-				<ul>
-					<li><a href="/about/history">History</a></li>
-					<li><a href="/about/team">The team</a></li>
-					<li><a href="/about/address">Our address</a></li>
-				</ul>
-			</li>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
+		<div>
+			<ul style="margin-top:100px;">
+				<li><a class="top-level" href="#">Opinión</a></li>
+				<li><a class="top-level" href="#">Laboral</a>
+					<ul>
+						<li><a href="#">Todos los vídeos</a></li>
+						<li><a href="#">Populares</a></li>
+						<li><a href="#">Especial reforma IRPF</a></li>
+						<li><a href="#">Más recientes</a></li>
+					</ul>
+				</li>
+				<li><a class="top-level" href="#">Fiscal</a></li>
+				<li><a class="top-level" href="#">Contable</a></li>
+			</ul>
+			<div class="off-menu__social">
+				<a class="social__icon i-twitter" href=""></a>
+		 		<a class="social__icon i-facebook" href=""></a>
+		 		<a class="social__icon i-linkedin" href=""></a>
+		 		<a class="social__icon i-gplus" href=""></a>
+			</div>
+			<p style="text-align:center;"><img src="img/wk_transparent_logo.png" alt=""></p>
+		</div>
 	</nav>
 	<nav id="off-user">
 		<ul>
@@ -716,7 +727,10 @@
                   "position": "left"
                },
                "extensions": [
-                  "theme-dark"
+               	  "effect-slide",
+               	  "pageshadow",
+                  "theme-white",
+                  "border-full"
                ]
             });
             $("#off-user").mmenu({
@@ -724,6 +738,8 @@
                   "position": "right"
                },
                "extensions": [
+               	  "effect-slide",
+               	  "pageshadow",
                   "theme-dark"
                ]
             });

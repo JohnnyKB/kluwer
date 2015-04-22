@@ -947,6 +947,23 @@ footer {
 	right:50px;
 }
 
+.top-level {
+	color: #50c1e6 !important;
+	text-transform: uppercase;
+}
+
+.off-menu__social {
+	margin: 100px 0 50px 0;
+	border: 1px solid rgba(255,255,255,0.2);
+	border-width: 1px 0 1px 0;
+	padding: 20px 0;
+}
+
+.off-menu__social .social__icon {
+	display: inline-block;
+	margin-left: 50px;
+}
+
 @media (max-width: 480px) {
 	.mvideo__title {
 		font-size: 2em;

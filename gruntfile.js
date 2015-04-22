@@ -8,7 +8,8 @@ module.exports = function(grunt) {
                 src : [
                     'css/style.css',
                     'index.html',
-                    'css/bootstrap.css'
+                    'css/bootstrap.css',
+                    'css/jquery.mmenu.all.css'
                 ],
             },
             options: {
