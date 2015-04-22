@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>AsesoresTV.com</title>
 
@@ -734,15 +734,21 @@
                ]
             });
             $("#off-user").mmenu({
+            	"slidingSubmenus": false,
                "offCanvas": {
                   "position": "right"
                },
                "extensions": [
                	  "effect-slide",
                	  "pageshadow",
-                  "theme-dark"
+                  "theme-white",
+                  "border-full"
                ]
             });
+            // var width = $(window).width();
+            // if (width <= 480) {
+            // 	$('head meta[name=viewport]').attr('content', 'width=640')
+            // }
         });
 	</script>
 	<script type='text/javascript' id="__bs_script__">//<![CDATA[
