@@ -6514,7 +6514,7 @@ button.close {
   }
 }
 @media (max-width: 480px) {
-  .hidden-xs, {
+  .hidden-xs {
     display: none !important;
   }
 }

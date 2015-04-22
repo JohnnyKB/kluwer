@@ -111,6 +111,7 @@ strong.conduit {
 	font-size: 1.25em;
 	text-transform: uppercase;
 	font-family: 'ConduitLight', sans-serif;
+	margin: 5px 0 10px;
 }
 
 .user-controls__username {
@@ -694,13 +695,9 @@ strong.conduit {
 }
 
 .bottomnav__menu__item:hover {
-	height: 93px;
-	margin-top: -5px;
-	width: 242px;
-	margin-left: -5px;
-	line-height: 93px;
 	color: #fff;
 	text-decoration: none;
+	transform: scale(1.1);
 }
 
 .bottomnav__menu__item:hover img {
@@ -809,11 +806,19 @@ footer {
 .v--mobile .video__item__title {
 	font-family: 'ConduitBold', 'ConduitLight', sans-serif;
 	padding-right: 20px;
+	font-size: 1.75em;
 	/*margin-bottom: 220px;*/
+
 }
 
 .v--mobile .video__item__author {
 	font-size: 1.7em;
+	margin-top: -5px;
+}
+
+.v--mobile .video__item__date {
+	display: block;
+	margin: -10px 0 0px 0;
 }
 
 .v--mobile .video__item__date,
@@ -822,13 +827,14 @@ footer {
 }
 
 .v--mobile .video__item__tags {
-	margin-bottom: 30px;
+	/*margin-bottom: 25px;*/
 }
 
 .v--mobile .video__item__date,
 .v--mobile .video__item__author {
 	color: #546e7a;
 }
+
 
 /* ==========================================================================
    Media Queries
@@ -839,13 +845,22 @@ footer {
 /* Top video + carousel
    ========================================================================== */
 
+.video__item__wrapper {
+	min-height: 200px;
+	margin-bottom: 20px;
+}
+
+.header div[class^="col-"] {
+	height: 100px;
+}
+
 .mvideo {
 	height: 490px;
 	overflow: hidden;
 }
 
 .mvideo__info {
-	margin-top: 260px;
+	margin-top: 200px;
 }
 
 .mvideo__title {
@@ -877,30 +892,132 @@ footer {
 	margin-bottom: 30px;
 }
 
+.about__title {
+	margin-top: 20px;
+}
+
 .about__item__text {
-	font-size: 0.9em;
+	font-size: 1.5em;
+}
+
+.about__text {
+	font-size: 1.6em;
+	padding: 0 25px;
 }
 
 .footer__section {
-	border-top: 1px solid #ccc;
-}
+	padding-top: 20px;
+	font-size: 1.2em;
 }
 
+.resfmenu {
+	background-color: #bdbdbd;
+	padding-bottom: 50px;
+	padding-top: 20px;
+}
+
+.resfmenu .footer__section {
+	padding-top: 0;
+}
+
+.resfmenu .item__link {
+	color: #212121;
+}
+
+footer {
+	padding-bottom: 0;
+}
+
+
+
+/* close mq */ } /* close mq */
+
+.off-trigger {
+	z-index: 15;
+	position: absolute;
+	/*top: 35px;*/
+	/*left: 40px;*/
+}
+
+.off-menu {
+	left: 50px;
+}
+
+.off-user {
+	right:50px;
+}
 
 @media (max-width: 480px) {
 	.mvideo__title {
 		font-size: 2em;
 	}
+
+	.bottomnav {
+		display: none;
+	}
+
+	.atv_logo {
+		width: 60%;
+		height: auto;
+		z-index: 1;
+		/*margin-bottom: 50px;*/
+	}
+
+	.header div[class^="col-"] {
+		height: 100px;
+		/*margin-bottom: 20px;*/
+	}
+
+	.off-menu {
+		left: 20px;
+	}
+
+	.off-user {
+		right: 20px;
+	}
+
 }
 
 
+/* ==========================================================================
+   asdas
+   ========================================================================== */
 
 
 
+/*
+#my-menu {
+	z-index: 5;
+}
 
+.mm-listview li span {
+   font-size: 16px;
+}
+.mm-listview li span small {
+    font-size: 12px;
+}
+.mm-listview li span img {
+   border-radius: 50px;
+   width: 50px;
+   height: 50px;
+   margin: -5px 10px -5px -5px;
+   float: left;
+}
 
+.mm-listview li:after {
+    left: 75px !important;
+}
 
+.mm-menu. .mm-header > a,
+.mm-menu .mm-counter {
+   color: blue;
+}
 
+.mm-listview > li > a,
+.mm-listview > li > span {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}*/
 
 
 
