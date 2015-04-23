@@ -114,6 +114,10 @@ strong.conduit {
 	margin: 5px 0 10px;
 }
 
+.user-controls {
+	right: 25px;
+}
+
 .user-controls__username {
 	font-size: 1.2em;
 	margin-left: 10px;
@@ -135,6 +139,25 @@ strong.conduit {
 .logo-tagline {
 	min-width: 100%;
 	/*height: 137px;*/
+}
+
+.user-controls-register {
+	display: none;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.user-controls-register a {
+	line-height: 40px;
+	font-size: 1.2em;
+}
+
+body:not(.logged-in) .user-controls {
+	display: none;
+}
+
+body:not(.logged-in) .user-controls-register {
+	display: block;
 }
 
 /* ==========================================================================
@@ -786,6 +809,40 @@ footer {
 }
 
 /* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact-button {
+	width: 40px;
+	height: 143px;
+	background-color: #0091ea;
+	position: fixed;
+	left: 0;
+	top: 50vh;
+	z-index: 15;
+	cursor: pointer;
+}
+
+.contact-button__icon {
+	width: 20px;
+	height: 20px;
+	background-image: url('../img/icon_contact_button.png');
+	margin: 20px 0 20px 10px;
+}
+
+.contact-button__text {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1.00000000, M12=-0.00000000, M21=0.00000000, M22=-1.00000000,sizingMethod='auto expand')";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1.00000000, M12=-0.00000000, M21=0.00000000, M22=-1.00000000,sizingMethod='auto expand');
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	/*margin-top: 60px;*/
+	font-family: 'ConduitBold', sans-serif;
+	color: #fff;
+	font-size: 1.35em;
+	margin-left: -5px;
+}
+
+/* ==========================================================================
    under construction
    ========================================================================== */
 
@@ -941,10 +998,20 @@ footer {
 
 .off-menu {
 	left: 50px;
+	width: 36px;
+	height: 24px;
+	background-image: url('../img/off_menu.png');
 }
 
 .off-user {
 	right:50px;
+	width: 32px;
+	height: 32px;
+	background-image: url('../img/off_user_loggedout.png');
+}
+
+body.logged-in .off-user {
+	background-image: url('../img/off_user.png');
 }
 
 .top-level {
