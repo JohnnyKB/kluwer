@@ -15,15 +15,16 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+      <link rel="stylesheet" href="css/ie8.css">
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="logged-in">
+  <body class="logged-out">
 	<div class="page">
-	<div class="contact-button">
+	<div class="contact-button" data-toggle="modal" data-target="#contactModal">
 		<div class="contact-button__icon"></div>
-		<div class="contact-button__text">CONTACTO</div>
+		<div class="rotated-text"><span class="rotated-text__inner contact-button__text">CONTACTO</span></div>
 	</div>
 	<header class="container header">
 		<div class="row">
@@ -53,8 +54,8 @@
 					</ul>
 				</div>
 				<div class="user-controls-register">
-					<button class="register__button">REGÍSTRATE AHORA</button>
-					<a href="#">ACCEDER</a>
+					<button class="register__button black-button">REGÍSTRATE AHORA</button>
+					<a href="#" data-toggle="modal" data-target="#loginModal">ACCEDER</a>
 				</div>
 			</div>
 			<!-- <div class="col-xs-2 hidden-lg"> -->
@@ -121,7 +122,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 col-md-offset-1">
-					<button class="register__button">REGÍSTRATE AHORA</button>
+					<button class="register__button black-button">REGÍSTRATE AHORA</button>
 				</div>
 				<div class="col-md-1">
 					<div class="register__close"></div>
@@ -521,19 +522,19 @@
 		<div class="container">
 			<div class="row">
 				<h3 class="about__title">¿QUÉ ES <strong>ASESORESTV</strong>?</h3>
-				<div class="col-md-3 col-sm-6 about__item">
+				<div class="col-md-3 col-xs-6 about__item">
 					<img src="img/about_1.png" alt="" class="about__item__image">
 					<p class="about__item__text">1500+ VÍDEOS DE EXPERTOS</p>
 				</div>
-				<div class="col-md-3 col-sm-6 about__item">
+				<div class="col-md-3 col-xs-6 about__item">
 					<img src="img/about_2.png" alt="" class="about__item__image">
 					<p class="about__item__text">RETRANSMISIONES EN VIVO</p>
 				</div>
-				<div class="col-md-3 col-sm-6 about__item">
+				<div class="col-md-3 col-xs-6 about__item">
 					<img src="img/about_3.png" alt="" class="about__item__image">
 					<p class="about__item__text">COLABORA Y MEJORA EL CONTENIDO</p>
 				</div>
-				<div class="col-md-3 col-sm-6 about__item">
+				<div class="col-md-3 col-xs-6 about__item">
 					<img src="img/about_4.png" alt="" class="about__item__image">
 					<p class="about__item__text">EXPERIENCIA MULTIPLATAFORMAS</p>
 				</div>
@@ -717,8 +718,58 @@
 			<li><a href="/contact">Contact</a></li>
 		</ul>
 	</nav>
+	
+	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content contact-modal">
+				<div class="container-fluid">
+					<a href="#" style="position: absolute; right: -30px;" data-dismiss="modal"><img src="img/icon_close_modal.png" alt=""></a>
+					<h3 class="contact-modal__title">Contacto AsesoresTV</h3>
+				</div>
+				<div class="hBG">
+					<div class="container-fluid">
+						<form action="" id="contactModalForm">
+							<p class="contact-modal__text">Envíanos tus dudas o sugerencias y en breve te responderemos.</p>
+							<input class="contact-modal__input" type="text" name="nombre" id="nombre" placeholder="Nombre" />
+							<input class="contact-modal__input" type="email" name="email" id="email" placeholder="Email" />
+							<textarea class="contact-modal__input contact-modal__textarea" name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+							<div class="contact-modal__checkbox">
+								<div class="squaredFour">
+									<input type="checkbox" value="None" id="squaredFour" name="check"/>
+									<label for="squaredFour"></label>
+								</div>
+								<label class="contact-modal__label" for="squaredFour">Quiero recibir una copia en mi Email</label>
+							</div>
+							<button class="black-button">ENVIAR</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content login-modal">
+				<a href="#" style="position: absolute; right: -30px;" data-dismiss="modal"><img src="img/icon_close_modal.png" alt=""></a>
+				<h3 class="login-modal__title">Accede a AsesoresTV</h3>
+				<a href="#"><img class="login-modal__social" src="img/access_facebook.png" alt="Acceder con Facebook"></a>
+				<a href="#"><img class="login-modal__social" src="img/access_google.png" alt="Acceder con Google"></a>
+				<form action="" id="loginModalForm">
+					<input class="login-modal__input" type="email" name="email" id="email" placeholder="Email">
+					<input class="login-modal__input" type="password" name="password" id="password" placeholder="Contraseña">
+					<a href="#" class="text-link">¿Olvidaste tu contraseña?</a>
+					<button class="black-button login__access">ACCEDER<img src="img/icon_right_caret.png" alt="Acceder"></button>
+				</form>
+				<div class="hBG">
+					<p>¿Aún no eres miembro?</p>
+					<button class="black-button login__register">REGÍSTRATE AHORA</button>
+				</div>
+			</div>
+		</div>
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mmenu.min.all.js"></script>
 	<script>
 		// setTimeout(function(){
@@ -757,6 +808,8 @@
             // if (width <= 480) {
             // 	$('head meta[name=viewport]').attr('content', 'width=640')
             // }
+
+            // $('#loginModal').modal('show')
         });
 	</script>
 	<script type='text/javascript' id="__bs_script__">//<![CDATA[

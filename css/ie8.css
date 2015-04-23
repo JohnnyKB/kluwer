@@ -1,0 +1,23 @@
+.logo-tagline {
+	left: 0;
+	top: 20px;
+}
+
+.wk-logo {
+	top: 40px;
+}
+
+.user-controls {
+	top: 40px;
+}
+
+.video__item__play {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/icon_play_big.png',
+	sizingMethod='scale');
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/icon_play_big.png',
+	sizingMethod='scale')";
+}

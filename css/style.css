@@ -60,6 +60,23 @@ strong.conduit {
 	padding-right: 0;
 }
 
+.black-button {
+	width: 202px;
+	height: 50px;
+	background-color: #2b353f;
+	border-radius: 4px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	border: 0;
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.1em;
+}
+
+.black-button:hover {
+	background-color: #20282f;
+}
+
 /* ==========================================================================
    Fonts
    ========================================================================== */
@@ -150,6 +167,7 @@ strong.conduit {
 .user-controls-register a {
 	line-height: 40px;
 	font-size: 1.2em;
+	font-family: 'ConduitLight', sans-serif;
 }
 
 body:not(.logged-in) .user-controls {
@@ -215,19 +233,19 @@ body:not(.logged-in) .user-controls-register {
 	box-shadow: 0px 0px 5px rgba(255,255,255,0.4);
 }
 
-::-webkit-input-placeholder {
+.search__input::-webkit-input-placeholder {
    color: #777;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+.search__input:-moz-placeholder { /* Firefox 18- */
    color: #777; 
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+.search__input::-moz-placeholder {  /* Firefox 19+ */
    color: #777; 
 }
 
-:-ms-input-placeholder {  
+.search__input:-ms-input-placeholder {  
    color: #777; 
 }
 
@@ -240,7 +258,7 @@ body:not(.logged-in) .user-controls-register {
 .topnav__social__item {
 	display: inline-block;
 	width: 33px;
-	height: 33;
+	height: 33px;
 	margin-right: 4px;
 	border-radius: 50%;
 }
@@ -304,21 +322,7 @@ body:not(.logged-in) .user-controls-register {
 }
 
 .register__button {
-	width: 202px;
-	height: 50px;
-	background-color: #2b353f;
-	border-radius: 4px;
-	color: #fff;
-	text-align: center;
-	line-height: 50px;
 	margin-top: 23px;
-	border: 0;
-	font-family: 'ConduitLight', sans-serif;
-	font-size: 1.1em;
-}
-
-.register__button:hover {
-	background-color: #20282f;
 }
 
 .register__close {
@@ -812,13 +816,17 @@ footer {
    Contact
    ========================================================================== */
 
+#contactModalForm {
+	text-align: center;
+}
+
 .contact-button {
 	width: 40px;
 	height: 143px;
 	background-color: #0091ea;
 	position: fixed;
 	left: 0;
-	top: 50vh;
+	top: 35%;
 	z-index: 15;
 	cursor: pointer;
 }
@@ -831,15 +839,201 @@ footer {
 }
 
 .contact-button__text {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1.00000000, M12=-0.00000000, M21=0.00000000, M22=-1.00000000,sizingMethod='auto expand')";
-	filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1.00000000, M12=-0.00000000, M21=0.00000000, M22=-1.00000000,sizingMethod='auto expand');
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);
-	/*margin-top: 60px;*/
 	font-family: 'ConduitBold', sans-serif;
 	color: #fff;
-	font-size: 1.35em;
-	margin-left: -5px;
+	font-size: 1.45em;
+}
+
+.contact-modal {
+	width: 399px;
+	height: 545px;
+	/* 365x525 */
+}
+
+.contact-modal .hBG {
+	height: 465px;
+}
+
+.contact-modal__title {
+	text-transform: uppercase;
+	font: 100 2em/1 'ConduitBold', sans-serif;
+	text-align: center;
+	color: #78909c;
+	margin: 25px 0;
+}
+
+.contact-modal__text {
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	padding: 12px 45px;
+}
+
+.contact-modal__input {
+	width: 100%;
+	border: 0;
+	padding: 9px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	outline: 0;
+	font-family: 'ConduitLight', sans-serif;
+}
+
+.contact-modal__input:focus {
+	outline: 0;
+	box-shadow: 0px 0px 3px #aaa;
+}
+
+.contact-modal__input::-webkit-input-placeholder {
+   color: #959a9f;
+   font-family: 'ConduitLight', sans-serif;
+}
+
+.contact-modal__input:-moz-placeholder { /* Firefox 18- */
+   color: #959a9f; 
+   font-family: 'ConduitLight', sans-serif;
+}
+
+.contact-modal__input::-moz-placeholder {  /* Firefox 19+ */
+   color: #959a9f; 
+   font-family: 'ConduitLight', sans-serif;
+}
+
+.contact-modal__input:-ms-input-placeholder {  
+   color: #959a9f; 
+   font-family: 'ConduitLight', sans-serif;
+}
+
+.contact-modal__label {
+	font: 100 1.1em/1 'ConduitLight',sans-serif !important;
+	color: #525a63;
+}
+
+.squaredFour {
+  width: 20px;
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+.squaredFour label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcfff4;
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.squaredFour label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: #333;
+  opacity: 0;
+  border-radius: 3px;
+}
+
+.squaredFour input[type=checkbox] {
+  visibility: hidden;
+}
+.squaredFour input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.contact-modal__checkbox {
+	width: 235px;
+	display: block;
+	margin: 15px auto;
+}
+
+.contact-modal__textarea {
+	height: 150px;
+	resize: none; 
+}
+
+/* Bootstrap modal patches to adapt design
+   ========================================================================== */
+
+.modal-content {
+	border-radius: 0;
+}
+
+#contactModal .modal-dialog {
+	width: 400px;
+}
+
+/* ==========================================================================
+   Login Modal
+   ========================================================================== */
+
+.login-modal {
+	width: 337px;
+	/*height: 562px;*/
+	text-align: center;
+	/*padding: 20px 66px;*/
+	font-family: 'ConduitLight', sans-serif;
+}
+
+.login-modal .text-link {
+	color: #666;
+	margin: 10px 0;
+	display: inline-block;
+}
+
+.login-modal__title {
+	text-transform: uppercase;
+	font: 100 1.7em/1 'ConduitLight', sans-serif;
+	text-align: center;
+	color: #2b353f;
+	margin: 25px 0;
+}
+
+.login-modal__social {
+	margin-bottom: 15px;
+}
+
+.login-modal__input {
+	width: 200px;
+	border: 1px solid black;
+	padding: 10px;
+	margin: 15px 0 0;
+}
+
+.login__access {
+	font-size: 1.5em;
+	background-color: #61bf1a;
+	margin-bottom: 20px;
+}
+
+.login__access:hover {
+	background-color: #6fd91e;
+}
+
+.login__access img {
+	margin-left: 15px;
+}
+
+.login__register {
+	font-size: 1.5em;
+}
+
+.login-modal .hBG {
+	padding: 25px 0;
+}
+
+.login-modal .hBG p {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+#loginModal .modal-dialog {
+	width: 337px;
 }
 
 /* ==========================================================================
@@ -864,8 +1058,6 @@ footer {
 	font-family: 'ConduitBold', 'ConduitLight', sans-serif;
 	padding-right: 20px;
 	font-size: 1.75em;
-	/*margin-bottom: 220px;*/
-
 }
 
 .v--mobile .video__item__author {
@@ -941,7 +1133,8 @@ footer {
 .mvideo__play,
 .video__item__share,
 .video__item__overlay,
-.l-grad, .r-grad {
+.l-grad, .r-grad,
+.contact-button {
   display: none;
 } 
 
@@ -1059,6 +1252,12 @@ body.logged-in .off-user {
 	.off-user {
 		right: 20px;
 	}
+	.about__item__text {
+		font-size: 1em;
+	}
+	.video__item__image img {
+		width: 100%;
+	}
 
 }
 
@@ -1069,52 +1268,46 @@ body.logged-in .off-user {
 
 
 
-/*
-#my-menu {
-	z-index: 5;
+
+
+
+
+
+
+
+
+.rotated-text {
+    display: inline-block;
+    overflow: hidden;
+    width: 1.5em;
+    margin-top: -8px;
+    margin-left: 10px;
 }
-
-.mm-listview li span {
-   font-size: 16px;
+.rotated-text__inner {
+    display: inline-block;
+    white-space: nowrap;
+    /* this is for shity "non IE" browsers
+       that dosn't support writing-mode */
+    -webkit-transform: translate(1.1em,0) rotate(90deg);
+       -moz-transform: translate(1.1em,0) rotate(90deg);
+         -o-transform: translate(1.1em,0) rotate(90deg);
+            transform: translate(1.1em,0) rotate(90deg);
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+         -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+   /* IE9+ */
+   -ms-transform: none;
+   -ms-transform-origin: none;
+   /* IE8+ */
+   -ms-writing-mode: tb-rl;
+   /* IE7 and below */
+   *writing-mode: tb-rl;
 }
-.mm-listview li span small {
-    font-size: 12px;
-}
-.mm-listview li span img {
-   border-radius: 50px;
-   width: 50px;
-   height: 50px;
-   margin: -5px 10px -5px -5px;
-   float: left;
-}
-
-.mm-listview li:after {
-    left: 75px !important;
-}
-
-.mm-menu. .mm-header > a,
-.mm-menu .mm-counter {
-   color: blue;
-}
-
-.mm-listview > li > a,
-.mm-listview > li > span {
-   padding-top: 20px;
-   padding-bottom: 20px;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
+.rotated-text__inner:before {
+    content: "";
+    float: left;
+    margin-top: 100%;
 
 
 
