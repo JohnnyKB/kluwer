@@ -63,7 +63,7 @@
 	<nav class="topnav">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 p0">
+				<div class="col-md-3 p0 sticky-hook--hide">
 					 <ul class="topnav__social">
 					 	<li class="topnav__social__item">
 					 		<a class="social__icon i-twitter" href=""></a>
@@ -78,6 +78,9 @@
 					 		<a class="social__icon i-gplus" href=""></a>
 					 	</li>
 					 </ul>
+				</div>
+				<div class="col-md-3 sticky-hook--show">
+					<img src="img/atv_logo_white.png" alt="AsesoresTV.com" style="width:100%; margin-top:10px;">
 				</div>
 				<div class="col-md-6 text-center">
 					<ul class="topnav__menu">
@@ -151,6 +154,16 @@
 							<img src="img/icon_lupa.png" alt="Search">
 						</div>
 						<input class="search__input" type="text" placeholder="Buscar en asesorestv">
+					</div>
+					<div class="sticky-hook--show">
+						<ul class="sticky__usermenu">
+							<li><img src="img/icon_user.png" alt="User Profile Image"> ▾
+								<ul>
+									<li><a href="#">Perfil</a></li>
+									<li><a href="#">Desconectar</a></li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -818,6 +831,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mmenu.min.all.js"></script>
+    <script src="js/jquery.sticky.js"></script>
 	<script>
 		// setTimeout(function(){
 		// 	$('.register').slideUp(150);
@@ -857,6 +871,7 @@
             // }
 
             // $('#loginModal').modal('show')
+            $(".topnav").sticky({topSpacing:0});
         });
 	</script>
 	<script type='text/javascript' id="__bs_script__">//<![CDATA[

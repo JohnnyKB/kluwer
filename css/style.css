@@ -185,6 +185,7 @@ body:not(.logged-in) .user-controls-register {
 .topnav {
 	background-color: #2b353f;
 	height: 57px;
+	z-index: 10; /* sticky menu */
 }
 
 .topnav__menu {
@@ -216,63 +217,14 @@ body:not(.logged-in) .user-controls-register {
 	font-family: 'Helvetica Neue Medium', 'Helvetica Medium', sans-serif;
 }
 
-.dropdown-l1 {
-	display: none;
-	z-index: 15;
-	position: absolute;
-	background-color: #20282f;
-	width: 860px;
-	height: 375px;
-	left: -200px;
-	color: #fff;
-	list-style: none;
-	padding: 0;
-	font-family: 'ConduitLight', sans-serif;
-}
-
-.dropdown-l2 {
-	list-style: none;
-	padding: 0;
-}
-
-.dropdown-l2 li {
-	margin-bottom: 10px;
-}
-
-.dropdown-l2 li a {
-	color: #ccc;
-	font-size: 1.1em;
-}
-
-.dropdown-l2__title {
-	text-transform: uppercase;
-	border-bottom: 1px solid rgb(51,61,68);
-	font-size: 1.3em;
-	color: #6cbce6;
-	padding-bottom: 5px;
-	margin-right: 20px;
-}
-
-.dropdown-l1 .dropdown-l2__title:nth-of-type(2) {
-	margin-top: 25px;
-}
-
-.topnav__menu-unit:hover .dropdown-l1 {
-	display: block;
-}
-
-.dropdown__column {
-	border-right: 1px solid rgb(11,19,25);
-	margin-top: 15px;
-	height: 340px;
-}
-
-.dropdown__column:last-of-type {
-	border-right: none;
+.topnav__search {
+	width: 219px;
+	display: inline-block;
+	transition: all 0.15s;
 }
 
 .search__input {
-	width: 219px;
+	width: 100%;
 	height: 34px;
 	background-color: #20282f;
 	border-radius: 50px;
@@ -350,6 +302,140 @@ body:not(.logged-in) .user-controls-register {
 
 .i-gplus {
 	background-image: url('../img/icon_rs_gplus.png');
+}
+
+/* Dropdown styling
+   ========================================================================== */
+
+.dropdown-l1 {
+	display: none;
+	z-index: 5;
+	position: absolute;
+	background-color: #20282f;
+	width: 860px;
+	height: 375px;
+	left: -200px;
+	color: #fff;
+	list-style: none;
+	padding: 0;
+	font-family: 'ConduitLight', sans-serif;
+}
+
+.dropdown-l2 {
+	list-style: none;
+	padding: 0;
+}
+
+.dropdown-l2 li {
+	margin-bottom: 10px;
+}
+
+.dropdown-l2 li a {
+	color: #ccc;
+	font-size: 1.1em;
+}
+
+.dropdown-l2__title {
+	text-transform: uppercase;
+	border-bottom: 1px solid rgb(51,61,68);
+	font-size: 1.3em;
+	color: #6cbce6;
+	padding-bottom: 5px;
+	margin-right: 20px;
+}
+
+.dropdown-l1 .dropdown-l2__title:nth-of-type(2) {
+	margin-top: 25px;
+}
+
+.topnav__menu-unit:hover .dropdown-l1 {
+	display: block;
+}
+
+.dropdown__column {
+	border-right: 1px solid rgb(11,19,25);
+	margin-top: 15px;
+	height: 340px;
+}
+
+.dropdown__column:last-of-type {
+	border-right: none;
+}
+
+/* Sticky menu
+   ========================================================================== */
+
+.sticky-hook--show {
+	display: none;
+}
+
+.is-sticky .sticky-hook--hide {
+	display: none;
+}
+
+.is-sticky .sticky-hook--show {
+	display: inline-block;
+}
+
+.is-sticky .topnav__search {
+	width: 120px;
+}
+
+.sticky__usermenu {
+	width: 57px;
+	height: 57px;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	color: #999;
+	list-style: none;
+}
+
+.sticky__usermenu > li {
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+}
+
+.sticky__usermenu li:hover {
+	background-color: #20282f;
+}
+
+.sticky__usermenu li:hover ul {
+	display: block;
+}
+
+
+.sticky__usermenu ul {
+	background-color: #20282f;
+	width: 120px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	color: #ccc;
+	left: -63px;
+	position: relative;
+	text-align: left;
+	display: none;
+}
+
+.sticky__usermenu ul li {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	border-bottom: 1px solid #0b121b;
+}
+
+.sticky__usermenu ul li:last-of-type {
+	border-bottom: 0;
+	border-top: 1px solid #323941;
+}
+
+.sticky__usermenu ul li a {
+	color: #999;
 }
 
 /* ==========================================================================
@@ -883,7 +969,7 @@ footer {
 	position: fixed;
 	left: 0;
 	top: 35%;
-	z-index: 15;
+	z-index: 5;
 	cursor: pointer;
 }
 
@@ -1150,6 +1236,10 @@ footer {
 /* Top video + carousel
    ========================================================================== */
 
+#sticky-wrapper {
+	display: none;
+}
+
 .video__item__wrapper {
 	min-height: 200px;
 	margin-bottom: 20px;
@@ -1239,7 +1329,7 @@ footer {
 /* close mq */ } /* close mq */
 
 .off-trigger {
-	z-index: 15;
+	z-index: 5;
 	position: absolute;
 	/*top: 35px;*/
 	/*left: 40px;*/
