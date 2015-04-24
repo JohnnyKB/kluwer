@@ -215,6 +215,49 @@ body:not(.logged-in) .user-controls-register {
 	font-family: 'Helvetica Neue Medium', 'Helvetica Medium', sans-serif;
 }
 
+.dropdown {
+	display: none;
+	z-index: 15;
+	position: absolute;
+	background-color: #20282f;
+	width: 860px;
+	height: 375px;
+	left: -200px;
+	opacity: 0;
+	color: #fff;
+	list-style: none;
+	padding: 0;
+	font-family: 'ConduitLight', sans-serif;
+}
+
+.dropdown-l2 {
+	list-style: none;
+	padding: 0;
+}
+
+.dropdown-l2 li {
+	color: #ccc;
+	line-height: 2;
+	font-size: 1.1em;
+}
+
+.dropdown-l2__title {
+	text-transform: uppercase;
+	border-bottom: 1px solid #666;
+	font-size: 1.3em;
+	color: #6cbce6;
+	margin-top: 25px;
+}
+
+.topnav__menu-unit:hover .dropdown {
+	display: block;
+	opacity: 1;
+}
+
+.right-border {
+	border-right: 1px solid red;
+}
+
 .search__input {
 	width: 219px;
 	height: 34px;
