@@ -28,9 +28,6 @@
 	</div>
 	<header class="container header">
 		<div class="row">
-			<!-- <div class="col-xs-2 hidden-lg"> -->
-				
-			<!-- </div> -->
 			<div class="col-md-3 p0 hidden-sm hidden-xs">
 				<img src="img/wk_header_logo.png" alt="Wolters Kluwer" class="wk-logo v-center">
 			</div>
@@ -49,8 +46,8 @@
 						<strong class="conduit">Alfredo Muñoz</strong>
 					</span>
 					<ul class="user-controls__buttons">
-						<li>perfil</li>
-						<li>cerrar sesión</li>
+						<li>Perfil</li>
+						<li>Cerrar sesión</li>
 					</ul>
 				</div>
 				<div class="user-controls-register">
@@ -740,10 +737,18 @@
 			</div>
 		</div>
 	</footer>
-	</div>
+	</div> <!-- div.page close -->
 	<nav id="off-menu">
 		<div>
-			<ul style="margin-top:100px;">
+			<form action="">
+				<div class="offmenu__search">
+					<div class="offmenu__search__icon">
+						<img src="img/icon_lupa_white.png" alt="Search">
+					</div>
+					<input class="search__input" type="text" placeholder="Buscar en asesorestv">
+				</div>
+			</form>
+			<ul>
 				<li><a class="top-level" href="#">Opinión</a></li>
 				<li><a class="top-level" href="#">Laboral</a>
 					<ul>
@@ -756,6 +761,9 @@
 				<li><a class="top-level" href="#">Fiscal</a></li>
 				<li><a class="top-level" href="#">Contable</a></li>
 			</ul>
+			<div class="off-menu__contact">
+				<a href=""><img src="img/icon_contact_button.png" alt="Contact">CONTACTO</a>
+			</div>
 			<div class="off-menu__social">
 				<a class="social__icon i-twitter" href=""></a>
 		 		<a class="social__icon i-facebook" href=""></a>
@@ -766,17 +774,34 @@
 		</div>
 	</nav>
 	<nav id="off-user">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/about">About us</a>
-				<ul>
-					<li><a href="/about/history">History</a></li>
-					<li><a href="/about/team">The team</a></li>
-					<li><a href="/about/address">Our address</a></li>
-				</ul>
-			</li>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
+		<div>
+			<div class="off-user__image">
+				<img src="img/img_user.jpg" alt="Ana Sánchez Gimeno">
+			</div>
+			<p class="off-user__name">
+				Ana Sánchez Gimeno
+			</p>
+			<div class="off-user__numbers">
+				<div class="off-user__rank">
+					<div class="rank-badge">
+						RANK
+						<img src="img/icon_rank_badge.png" alt="Badge">
+					</div>
+					<div class="rank-number">56</div><div class="rank-arrow">▴</div>
+					<div class="total-rank">de 6534</div>
+				</div>
+				<div class="off-user__points">
+					<div class="points__number">2435</div>
+					PUNTOS
+				</div>
+			</div>
+			<ul>
+				<li><a class="top-level" href="#"><img class="off-user__icon" src="img/icon_off_stats.png" alt="">Stats</a></li>
+				<li><a class="top-level" href="#"><img class="off-user__icon" src="img/icon_off_profile.png" alt="">Editar perfil</a></li>
+				<li><a class="top-level" href="#"><img class="off-user__icon" src="img/icon_off_favorites.png" alt="">Favoritos</a></li>
+			</ul>
+			<div class="off-user__session"><a class="top-level" href="#">CERRAR SESIÓN</a></div>
+		</div>
 	</nav>
 	
 	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
@@ -870,8 +895,19 @@
             // 	$('head meta[name=viewport]').attr('content', 'width=640')
             // }
 
-            // $('#loginModal').modal('show')
+            // $('#loginModal').modal('show');
+
+            // ACTUALLY REAL JS THAT NEEDS TO STAY
+
             $(".topnav").sticky({topSpacing:0});
+
+            $('.off-menu__contact').on('click', function(ev){
+            	var menu = $('#off-menu').data('mmenu');
+            	menu.close();
+            	setTimeout(function(){
+            		$('#contactModal').modal('show');
+            	}, 500);
+            });
         });
 	</script>
 	<script type='text/javascript' id="__bs_script__">//<![CDATA[

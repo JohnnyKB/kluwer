@@ -170,12 +170,14 @@ strong.conduit {
 	font-family: 'ConduitLight', sans-serif;
 }
 
-body:not(.logged-in) .user-controls {
-	display: none;
+body.logged-in .user-controls,
+body.logged-out .user-controls-register {
+	display: block;
 }
 
-body:not(.logged-in) .user-controls-register {
-	display: block;
+body.logged-out .user-controls,
+body.logged-in .user-controls-register {
+	display: none;
 }
 
 /* ==========================================================================
@@ -1226,6 +1228,235 @@ footer {
 	color: #546e7a;
 }
 
+/* ==========================================================================
+   Off menus
+   ========================================================================== */
+
+.off-trigger {
+	z-index: 5;
+	position: absolute;
+}
+
+.off-menu {
+	left: 50px;
+	width: 36px;
+	height: 24px;
+	background-image: url('../img/off_menu.png');
+}
+
+.off-user {
+	right:50px;
+	width: 32px;
+	height: 32px;
+	background-image: url('../img/off_user_loggedout.png');
+}
+
+body.logged-in .off-user {
+	background-image: url('../img/off_user.png');
+}
+
+.offmenu__search {
+	max-width: 350px;
+	margin: 0 auto 50px;
+	position: relative;
+}
+
+.offmenu__search__icon {
+	position: absolute;
+	right: 15px;
+	top: 20px;
+}
+
+.offmenu__search .search__input {
+	height: 45px;
+	background-color: #546e7a;
+	color: #a9b8bf;
+	font-size: 1.4em;
+	padding: 0 50px 0 15px;
+}
+
+.offmenu__search .search__input::-webkit-input-placeholder {
+   color: #a9b8bf;
+}
+
+.offmenu__search .search__input:-moz-placeholder { /* Firefox 18- */
+   color: #a9b8bf; 
+}
+
+.offmenu__search .search__input::-moz-placeholder {  /* Firefox 19+ */
+   color: #a9b8bf; 
+}
+
+.offmenu__search .search__input:-ms-input-placeholder {  
+   color: #a9b8bf; 
+}
+
+#off-menu ul {
+	/*margin-top: 100px;*/
+}
+
+.top-level {
+	color: #50c1e6 !important;
+	text-transform: uppercase;
+}
+
+.off-menu__social {
+	margin: 0 auto 50px auto;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	padding: 20px 0;
+	text-align: center;
+}
+
+.off-menu__social .social__icon {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.off-menu__contact {
+	margin: 40px -20px 0;
+	background-color: #455a64;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.off-menu__contact a {
+	color: #fff;
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.5em;
+}
+
+.off-menu__contact a img {
+	margin-right: 10px;
+}
+
+/* Off-user menu
+   ========================================================================== */
+
+.off-user__image {
+	height: 119px;
+	width: 119px;
+	border-radius: 50%;
+	border: 3px solid #ccc;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.off-user__image img {
+	width: auto;
+	height: 100%;
+}
+
+.off-user__name {
+	font-family: 'ConduitBold', sans-serif;
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 2.5em;
+	line-height: 1.3;
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 15px;
+	color: #b0bec5;
+}
+
+.off-user__icon {
+	margin-right: 25px;
+	width: 30px;
+}
+
+.off-user__numbers {
+	height: 93px;
+	margin: 40px -20px;
+	padding: 0;
+}
+
+.off-user__rank {
+	display: inline-block;
+	float: left;
+	background-color: #455a64;
+	width: 50%;
+	height: 100%;
+}
+
+.off-user__points {
+	display: inline-block;
+	float: left;
+	width: 50%;
+	height: 100%;
+	background-image:
+    linear-gradient(
+      45deg, 
+      #0091ea, #8bc34a
+    );
+    font-family: 'ConduitLight', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.points__number {
+	font-family: 'ConduitBold', sans-serif;
+	font-size: 2.75em;
+	text-align: center;
+	margin: 10px 0 -5px 0;
+}
+
+.off-user__rank {
+	text-align: center;	
+}
+
+.rank-badge {
+	width: 50px;
+	text-align: center;
+	font-family: 'ConduitLight',sans-serif;
+	font-size: 1.5em;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.rank-number {
+	font-size: 4em;
+	font-family: 'ConduitBold',sans-serif;
+	display: inline-block;
+	position: relative;
+	top: -10px;
+}
+
+.rank-arrow {
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	margin-left: 10px;
+	color: #8bc34a;
+	-webkit-transform: scale(2,1);
+	transform: scale(2,1);
+}
+
+.rank-arrow.red {
+	-webkit-transform: rotate(180deg) scale(2,1);
+	transform: rotate(180deg) scale(2,1);
+	color: #f44336;
+}
+
+.total-rank {
+	font-family: 'ConduitLight', sans-serif;
+	color: #cfd8dc;
+	position: relative;
+	top: -25px;
+	left: 25px;
+	font-size: 1.5em;
+}
+
+.off-user__session {
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+	width: 100%;
+	margin-left: -20px;
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 2.5em;
+}
 
 /* ==========================================================================
    Media Queries
@@ -1324,51 +1555,7 @@ footer {
 	padding-bottom: 0;
 }
 
-
-
 /* close mq */ } /* close mq */
-
-.off-trigger {
-	z-index: 5;
-	position: absolute;
-	/*top: 35px;*/
-	/*left: 40px;*/
-}
-
-.off-menu {
-	left: 50px;
-	width: 36px;
-	height: 24px;
-	background-image: url('../img/off_menu.png');
-}
-
-.off-user {
-	right:50px;
-	width: 32px;
-	height: 32px;
-	background-image: url('../img/off_user_loggedout.png');
-}
-
-body.logged-in .off-user {
-	background-image: url('../img/off_user.png');
-}
-
-.top-level {
-	color: #50c1e6 !important;
-	text-transform: uppercase;
-}
-
-.off-menu__social {
-	margin: 100px 0 50px 0;
-	border: 1px solid rgba(255,255,255,0.2);
-	border-width: 1px 0 1px 0;
-	padding: 20px 0;
-}
-
-.off-menu__social .social__icon {
-	display: inline-block;
-	margin-left: 50px;
-}
 
 @media (max-width: 480px) {
 	.mvideo__title {
@@ -1404,23 +1591,24 @@ body.logged-in .off-user {
 	.video__item__image img {
 		width: 100%;
 	}
+	.off-user__name {
+		font-size: 1.8em;
+		margin-top: 25px;
+	}
+	.contact-modal {
+		width: 320px;
+	}
+	.contact-modal__text {
+		font-size: 1.3em;
+		padding: 20px 0 10px;
+	}
 
 }
 
 
 /* ==========================================================================
-   asdas
+   Rotated text
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
 
 .rotated-text {
     display: inline-block;
@@ -1454,12 +1642,7 @@ body.logged-in .off-user {
     content: "";
     float: left;
     margin-top: 100%;
-
-
-
-
-
-
+}
 
 
 

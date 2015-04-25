@@ -21,3 +21,25 @@
 	src='../img/icon_play_big.png',
 	sizingMethod='scale')";
 }
+
+.rotated-text {
+	margin-left: 5px;
+}
+
+.l-grad {
+	background-image: url('../img/ie8_left_grad.png');
+	background-repeat: repeat-y;
+}
+
+.r-grad {
+	background-image: url('../img/ie8_right_grad.png');
+	background-repeat: repeat-y;
+}
+
+.bottomnav__menu__item {
+	color: #fff;
+}
+
+.bottomnav__menu__item:hover {
+	text-decoration: underline;
+}
