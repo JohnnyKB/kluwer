@@ -8,6 +8,7 @@ module.exports = function(grunt) {
                 src : [
                     'css/style.css',
                     'index.html',
+                    'lista_videos.html',
                     'css/bootstrap.css',
                     'css/jquery.mmenu.all.css'
                 ],
