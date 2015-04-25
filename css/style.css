@@ -450,6 +450,10 @@ body.logged-in .user-controls-register {
 	position: relative;
 }
 
+.logged-in .register {
+	display: none;
+}
+
 .register__icon {
 	background-image: url('../img/icon_info.png');
 	width: 48px;
@@ -1385,14 +1389,14 @@ body.logged-in .off-user {
 	width: 50%;
 	height: 100%;
 	background-image:
-    linear-gradient(
-      45deg, 
-      #0091ea, #8bc34a
-    );
-    font-family: 'ConduitLight', sans-serif;
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1;
+	linear-gradient(
+	  45deg, 
+	  #0091ea, #8bc34a
+	);
+	font-family: 'ConduitLight', sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1;
 }
 
 .points__number {
@@ -1473,10 +1477,6 @@ body.logged-in .off-user {
 	border-bottom: 1px solid #d0d0d0;
 }
 
-.vlist__item:last-of-type {
-	border-bottom: none;
-}
-
 .vlist__title {
 	font-family: 'ConduitBold', sans-serif;
 	text-transform: uppercase;
@@ -1521,7 +1521,18 @@ body.logged-in .off-user {
 	padding: 5px 0 5px 10px;
 }
 
-/* comment
+.vermas {
+	background-color: #ccc;
+	text-transform: uppercase;
+	margin: 50px auto;
+	display: block;
+}
+
+.vermas:hover {
+	background-color: #bbb;
+}
+
+/* Sidebar
    ========================================================================== */
 
 .r14 {
@@ -1600,6 +1611,166 @@ body.logged-in .off-user {
 	line-height: 1.3;
 	color: #424242;
 }
+
+/* ==========================================================================
+   perfil.html
+   ========================================================================== */
+
+.user__info, .user__ranking {
+	background-color: #f9fafb;
+}
+
+.user__profile__title {
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 2em;
+	color: #a2a2a2;
+	text-transform: uppercase;
+	margin: 30px auto;
+}
+
+.user__image {
+	border-radius: 50%;
+	width: 199px;
+	height: 199px;
+	overflow: hidden;
+	display: inline-block;
+	border: 5px solid white;
+	margin-bottom: 30px;
+}
+
+.user__image img {
+	width: 100%;
+}
+
+.user__info {
+	font-family: 'ConduitLight', sans-serif;
+	color: #757575;
+	font-size: 1.15em;
+}
+
+.user__info__name {
+	font-family: 'ConduitBold', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	color: #2b353f;
+}
+
+.user__info__edit {
+	margin-top: 40px;
+}
+
+.user__stats {
+	height: 196px;
+	background-image:
+	linear-gradient(
+	  45deg, 
+	  #0091ea, #8bc34a
+	);
+}
+
+.stats__row {
+	height: 98px;
+}
+
+.row-2 {
+	/*background-color: #fff;*/
+}
+
+.user__ranking__title {
+	color: #b0bec5;
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	margin: 35px 0;
+}
+
+.ranked__user {
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.3em;
+	background-color: #eceff1;
+	padding: 5px 0;
+	height: 32px;
+	margin-bottom: 3px;
+}
+
+.rank__number {
+	background-color: #546e7a;
+	height: 32px;
+	margin-top: -5px;
+	line-height: 35px;
+	margin-left: -15px;
+	padding-left: 40px;
+	font-family: 'ConduitBold', sans-serif;
+	color: #fff;
+	width: 130px;
+}
+
+.ranked__user:nth-of-type(2n+5) .rank__number {
+	background-color: #78909c;
+}
+
+.rank__name {
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+
+.rank__workplace {
+	text-transform: uppercase;
+}
+
+.rank__karma .string, .rank__points .string {
+	font-size: .8em;
+	margin-top: -4px;
+}
+
+.rank__karma strong, .rank__points strong {
+	font-size: 1.5em;
+	/*line-height: 1 !important;*/
+	font-family: 'ConduitBold', sans-serif;
+}
+
+.rank__workplace,
+.rank__karma,
+.rank__points {
+	border-left: 1px solid #cfd8dc;
+	height: 23px;
+}
+
+.rank__top3 {
+	height: 58px;
+	line-height: 53px;
+}
+
+.ranked__user__image {
+	height: 58px;
+	width: 58px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	display: inline-block;
+	right: 14px;
+	top: -5px;
+	border: 2px solid white;
+	text-align: center;
+}
+
+.rank__top3 .rank__number {
+	height: 58px;
+	line-height: 59px;
+	font-size: 1.7em;
+}
+
+.rank__top3 .rank__workplace,
+.rank__top3 .rank__karma,
+.rank__top3 .rank__points {
+	height: 48px;
+}
+
+.rank__top3 .rank__karma .string, .rank__top3 .rank__points .string {margin-top: 0;}
+
+.user__rank1 .rank__number {background-color: #fbc02d;}
+.user__rank2 .rank__number {background-color: #8bc34a;}
+.user__rank3 .rank__number {background-color: #0091ea;}
 
 /* ==========================================================================
    Media Queries
@@ -1705,6 +1876,15 @@ footer {
 	padding-bottom: 0;
 }
 
+.rank__number {
+	width: 70px;
+	padding-left: 20px;
+}
+
+.ranked__user__image {
+	right: 5px;
+}
+
 /* close mq */ } /* close mq */
 
 @media (max-width: 480px) {
@@ -1751,6 +1931,16 @@ footer {
 	.contact-modal__text {
 		font-size: 1.3em;
 		padding: 20px 0 10px;
+	}
+	.rank__number {
+		width: 50px;
+		padding-left: 10px;
+	}
+	.rank__top3 .rank__number{
+		padding-left: 17px;
+	}
+	.ranked__user__image {
+		display: none;
 	}
 
 }
