@@ -1665,11 +1665,6 @@ body.logged-in .off-user {
 	margin-right: 15px;
 }
 
-.user__stats {
-	height: 196px;
-	
-}
-
 .expandbg {
 	background-image: linear-gradient( 45deg, #0091ea, #8bc34a );
 	height: 98px;
@@ -1684,10 +1679,7 @@ body.logged-in .off-user {
 .expandbg.rank {
 	background-color: #eceff1;
 	background-image: none;
-}
-
-.stats__row {
-	height: 98px;
+	top: 98px;
 }
 
 .stats__points {
@@ -1716,7 +1708,7 @@ body.logged-in .off-user {
 	font-family: 'ConduitLight', sans-serif;
 	font-size: 1.2em;
 	line-height: 1.2;
-	margin-top: 12px;
+	margin-top: 18px;
 }
 
 .user__stats__item strong {
@@ -1827,6 +1819,10 @@ body.logged-in .off-user {
 .user__rank1 .rank__number {background-color: #fbc02d;}
 .user__rank2 .rank__number {background-color: #8bc34a;}
 .user__rank3 .rank__number {background-color: #0091ea;}
+
+.stats__breakdown {
+	min-height: 196px;
+}
 
 /* ==========================================================================
    Media Queries
@@ -1966,6 +1962,62 @@ footer {
 	right: 5px;
 }
 
+.expandbg {
+	width: 50% !important;
+	min-width: inherit;
+	position: relative;
+	display: inline-block;
+}
+
+.expandbg.rank {
+	float: left;
+	top: 0;
+	background-color: #475a64;
+}
+
+.expandbg.rank .rank-number {
+	color: #fff;
+}
+
+.expandbg.rank .rank-badge,
+.expandbg.rank .total-rank {
+	color: #eceff1;
+}
+
+.stats__points {
+	float: left;
+	margin-left: 50px;
+}
+
+.stats__rank {
+	float: right;
+	margin-right: 50px;
+}
+
+.stats__bar--expander {
+	position: absolute;
+	width: calc(100% + 32px);
+	left: -16px;
+}
+
+.stats__breakdown {
+	margin-top: 98px;
+	margin-bottom: 50px;
+}
+
+.user__stats__item {
+	padding-left: 80px;
+}
+
+.user__stats__item strong {
+	padding-left: 30px;
+}
+
+.stat__icon {
+	margin-left: 0;
+}
+
+
 /* close mq */ } /* close mq */
 
 @media (max-width: 480px) {
@@ -2023,7 +2075,15 @@ footer {
 	.ranked__user__image {
 		display: none;
 	}
-
+	.stats__points {
+		margin-left: 25px;
+	}
+	.stats__rank {
+		margin-right: 25px;
+	}
+	.user__stats__item {
+		padding-left: 40px;
+	}
 }
 
 
