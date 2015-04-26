@@ -1657,23 +1657,79 @@ body.logged-in .off-user {
 
 .user__info__edit {
 	margin-top: 40px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.user__info__edit img {
+	margin-right: 15px;
 }
 
 .user__stats {
 	height: 196px;
-	background-image:
-	linear-gradient(
-	  45deg, 
-	  #0091ea, #8bc34a
-	);
+	
+}
+
+.expandbg {
+	background-image: linear-gradient( 45deg, #0091ea, #8bc34a );
+	height: 98px;
+	position: absolute;
+	display: block;
+	width: 40vw;
+	min-width: 768px;
+	text-align: right;
+	right: 0;
+}
+
+.expandbg.rank {
+	background-color: #eceff1;
+	background-image: none;
 }
 
 .stats__row {
 	height: 98px;
 }
 
-.row-2 {
-	/*background-color: #fff;*/
+.stats__points {
+	display: inline-block;
+	font-family: 'ConduitLight', sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1;
+	color: #fff;
+	margin-right: 80px;
+}
+
+.stats__rank {
+	display: inline-block;
+	margin-right: 80px;
+	color: #2b353f;
+}
+
+.stats__rank > .total-rank {
+	left: inherit;
+	right: 5px;
+	color: #2b353f;
+}
+
+.user__stats__item {
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.2em;
+	line-height: 1.2;
+	margin-top: 12px;
+}
+
+.user__stats__item strong {
+	font-size: 2.5em;
+	display: block;
+	font-family: 'ConduitBold', sans-serif;
+	color: #0091ea;
+}
+
+.stat__icon {
+	position: absolute;
+	margin-top: 9px;
+	margin-left: -35px;
 }
 
 .user__ranking__title {
@@ -1788,6 +1844,30 @@ body.logged-in .off-user {
 	padding: 32px;
 }
 
+.user__info {
+	background-color: #2a353f;
+	text-align: center;
+	color: #ccc;
+}
+
+.user__info a {
+	color: #aaa;
+}
+
+.user__info__edit {
+	margin: 30px;
+}
+
+.user__info__name {
+	color: #eceff1;
+}
+
+.user__image {
+	width: 115px;
+	height: 115px;
+	margin-top: 30px;
+}
+
 #sticky-wrapper {
 	display: none;
 }
@@ -1832,7 +1912,8 @@ body.logged-in .off-user {
 .video__item__share,
 .video__item__overlay,
 .l-grad, .r-grad,
-.contact-button {
+.contact-button,
+.user__profile__title {
   display: none;
 } 
 
