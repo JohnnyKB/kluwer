@@ -1824,6 +1824,125 @@ body.logged-in .off-user {
 	min-height: 196px;
 }
 
+/* Edit profile
+   ========================================================================== */
+
+.user__edit {
+	background-color: #eceff0;
+	display: none;
+}
+
+.edit__block {
+	background-color: #fff;
+	padding: 1px 20px 20px;
+	margin: 30px 0;
+	float: left;
+	min-height: 504px;
+}
+
+.edit__block__title {
+	font-family: 'ConduitBold', sans-serif;
+	font-size: 1.4em;
+	margin: 20px 0;
+	padding-left: 15px;
+}
+
+.edit__item {
+	display: inline-block;
+	width: 50%;
+	height: 50px;
+	float: left;
+	position: relative;
+	padding: 0 15px;
+	margin-bottom: 8px;
+}
+
+.item__label {
+	display: block;
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.1em;
+	margin-bottom: 1px;
+}
+
+.item__input {
+	width: 100%;
+	border: 1px solid #000;
+}
+
+.item__checkbox,
+.checkbox__label {
+	float: left;
+	display: inline-block;
+	margin-top: 20px !important;
+}
+
+.checkbox__label {
+	font-family: 'ConduitLight', sans-serif;
+	width: 85%;
+	margin-left: 10px;
+	font-size: 0.9em;
+	line-height: 1.2;
+}
+
+.edit__submit {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.edit__submit .black-button {
+	font-size: 1.5em;
+	background-color: #61bf1a;
+	margin-bottom: 20px;
+	border-radius: 0;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.edit__submit .black-button:hover {
+	background-color: #6fd91e;
+}
+
+.edit__submit .black-button img {
+	margin-left: 15px;
+}
+
+.edit__submit a {
+	font-family: 'ConduitLight', sans-serif;
+	font-size: 1.2em;
+	color: #333;
+	text-decoration: underline;
+}
+
+.edit__percent {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.edit__percent__bar {
+	background-color: #e0e0e0;
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+
+.edit__percent__progress {
+	background-color: #a0d07e;
+	width: 65%;
+	height: 100%;
+}
+
+.edit__percent__text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 50px;
+	text-align: center;
+	font-family: 'ConduitBold', sans-serif;
+	font-size: 1.4em;
+	color: #fff;
+}
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -2083,6 +2202,12 @@ footer {
 	}
 	.user__stats__item {
 		padding-left: 40px;
+	}
+	.edit__item {
+		width: 100%;
+	}
+	.edit__submit {
+		min-height: 90px;
 	}
 }
 
