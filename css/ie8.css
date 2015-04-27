@@ -43,3 +43,7 @@
 .bottomnav__menu__item:hover {
 	text-decoration: underline;
 }
+
+.expandbg {
+	background-color: #03a0d7;
+}
