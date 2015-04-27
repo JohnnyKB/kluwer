@@ -20,7 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="logged-in">
+  <body class="logged-out">
 	<div class="page">
 	<div class="contact-button" data-toggle="modal" data-target="#contactModal">
 		<div class="contact-button__icon"></div>
@@ -188,286 +188,277 @@
 		</div>
 	</div>
 	
-	<div class="profile">
-		<div class="user__info">
+	<div class="vpage">
+		<div class="vpage__container">
 			<div class="container">
-				<h2 class="user__profile__title">Perfil público</h2>
 				<div class="row">
-					<div class="col-md-3 text-center">
-						<div class="user__image"><img src="img/user_image.jpg" alt="Usuario"></div>
-					</div>
-					<div class="col-md-8 col-md-offset-1">
-						<div class="user__info__name">Carlos Vela Araos</div>
-						<div class="user__info__workplace">Contable en Vela asociados</div>
-						<div class="user__info__email"><a href="#">carlos@velaasociados.com</a></div>
-						<div class="user__info__web"><a href="#">www.velaasociados.com</a></div>
-						<div class="user__info__edit"><img src="img/icon_edit.png" alt="Editar perfil">Editar perfil</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="user__edit">
-			<div class="container">
-				<div class="col-md-6">
-					<div class="edit__block">
-						<h3 class="edit__block__title">Información personal de la cuenta</h3>
-						<div class="edit__item">
-							<label for="input_a_1" class="item__label">Dirección de e-mail*</label>
-							<input type="text" id="input_a_1" class="item__input">
+					<div class="col-md-7 vpage__video__bg">
+						<iframe class="vpage__video" src="https://player.vimeo.com/video/48984170" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<div class="vpage__rating">
+							<div class="rating__numvotes">45 votaciones</div>
+							<div class="rating__score">3,4 / 5</div>
+							<div class="rating__stars">
+								<div class="staricon full"></div>
+								<div class="staricon full"></div>
+								<div class="staricon full"></div>
+								<div class="staricon half"></div>
+								<div class="staricon empty"></div>
+							</div>
+							<a href="#" class="rating__access"><em>Accede</em> para valorar el vídeo</a>
 						</div>
-						<div class="edit__item">
-							<label for="input_a_2" class="item__label">Nombre*</label>
-							<input type="text" id="input_a_2" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_3" class="item__label">Contraseña*</label>
-							<input type="text" id="input_a_3" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_4" class="item__label">Apellidos*</label>
-							<input type="text" id="input_a_4" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_5" class="item__label">Confirmar contraseña*</label>
-							<input type="text" id="input_a_5" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_6" class="item__label">Teléfono</label>
-							<input type="text" id="input_a_6" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_7" class="item__label">Skype</label>
-							<input type="text" id="input_a_7" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_8" class="item__label">Twitter</label>
-							<input type="text" id="input_a_8" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_9" class="item__label">Blog</label>
-							<input type="text" id="input_a_9" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_10" class="item__label">Facebook</label>
-							<input type="text" id="input_a_10" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_11" class="item__label">Confirmar contraseña*</label>
-							<input type="text" id="input_a_11" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_a_12" class="item__label">Apellidos*</label>
-							<input type="text" id="input_a_12" class="item__input">
-						</div>
-						<div class="edit__item edit__percent">
-							<div class="edit__percent__bar">
-								<div class="edit__percent__text">65% del perfil completo</div>
-								<div class="edit__percent__progress"></div>
+						<div class="vpage__share hidden-sm hidden-xs">
+							<div class="share__container">
+								<a href="#" class="share__channel facebook"><span class="string">1K</span></a>
+								<a href="#" class="share__channel twitter"><span class="string">535</span></a>
+								<a href="#" class="share__channel gplus"><span class="string">28</span></a>
+								<a href="#" class="share__more"></a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="edit__block">
-						<h3 class="edit__block__title">Datos profesionales</h3>
-						<div class="edit__item">
-							<label for="input_b_1" class="item__label">Razón Social*</label>
-							<input type="text" id="input_b_1" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_2" class="item__label">CIF*</label>
-							<input type="text" id="input_b_2" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_3" class="item__label">Tipo de Asesoría*</label>
-							<select name="input_b_3" id="input_b_3" class="item__input">
-								<option value="Ejemplo">Ejemplo</option>
-								<option value="Ejemplo2">Ejemplo2</option>
-							</select>
-						</div>
-						<div class="edit__item">
-							<label for="input_b_4" class="item__label">Dirección*</label>
-							<input type="text" id="input_b_4" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_5" class="item__label">CP*</label>
-							<input type="text" id="input_b_5" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_6" class="item__label">Provincia*</label>
-							<select name="input_b_6" id="input_b_6" class="item__input">
-								<option value="Ejemplo">Ejemplo</option>
-								<option value="Ejemplo2">Ejemplo2</option>
-							</select>
-						</div>
-						<div class="edit__item">
-							<label for="input_b_7" class="item__label">Cargo*</label>
-							<input type="text" id="input_b_7" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_8" class="item__label">Departamento*</label>
-							<input type="text" id="input_b_8" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_9" class="item__label">Website</label>
-							<input type="text" id="input_b_9" class="item__input">
-						</div>
-						<div class="edit__item">
-							<label for="input_b_10" class="item__label">Colectivo</label>
-							<select name="input_b_10" id="input_b_10" class="item__input">
-								<option value="Ejemplo">Ejemplo</option>
-								<option value="Ejemplo2">Ejemplo2</option>
-							</select>
-						</div>
-						<div class="edit__item">
-							<input class="item__checkbox" type="checkbox" name="newsletter" id="newsletter">
-							<label class="checkbox__label" for="newsletter">¿Quieres recibir la newsletter con la que te informaremos de los nuevos contenidos publicados en asesorestv.com?*</label>
-						</div>
-						<div class="edit__item edit__submit">
-							<button class="black-button">Modificar<img src="img/icon_right_caret.png" alt="Acceder"></button>
-							<a href="#">Darse de baja</a>
+					<div class="col-md-5 vpage__meta">
+						<div class="vpage__date">26 sept 2015<div class="vpage__author hidden-lg">por <strong class="conduit">Javier Frutos</strong></div></div>
+						<h2 class="vpage__title">La inteligencia contable aporta rentabilidad, productividad y satisfacción a tus clientes</h2>
+						<p class="vpage__desc hidden-sm hidden-xs">Jesús Badás, Jefe del Equipo Nacional de Inspección de la Sede de Barcelona de la AEAT, traslada en su ponencia aquellas novedades fiscales aprobadas en 2014 que incentivan el emprendimiento: incentivo a la creación de nuevas empresas, incentivo a la exención de la renta por cesión de activos intangibles...</p>
+						<div class="vpage__tags">
+							<div class="vpage__tags__icon"><img src="img/icon_vpage_tags.png" alt="Tags"></div>
+							<div class="vpage__tags__text"><em>Etiquetas:</em> Fiscal, Entrevistas, Jose Lumeras, Destacados</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="user__stats">
+		<div class="vpage__bottom">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-3 stats__bar--expander">
-						<div class="expandbg">
-							<div class="stats__points">
-								<div class="points__number">2435</div>
-								PUNTOS
-							</div>
-						</div>
-						<div class="expandbg rank">
-							<div class="stats__rank">
-								<div class="rank-badge">
-									RANK
-									<img src="img/icon_rank_badge.png" alt="Badge">
+
+			<div role="tabpanel" class="hidden-lg">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class=""><a href="#info" aria-controls="info" role="tab" data-toggle="tab"><div class="tabicon info"></div></a></li>
+					<li role="presentation" class="active"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab"><span class="numcomments">32</span> <div class="tabicon comments"></div></a></li>
+					<li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab"><div class="tabicon other"></div></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane" id="info">
+						<p class="vpage__desc">Jesús Badás, Jefe del Equipo Nacional de Inspección de la Sede de Barcelona de la AEAT, traslada en su ponencia aquellas novedades fiscales aprobadas en 2014 que incentivan el emprendimiento: incentivo a la creación de nuevas empresas, incentivo a la exención de la renta por cesión de activos intangibles...</p>
+						<div class="vpage__tags__text"><em>Etiquetas:</em> Fiscal, Entrevistas, Jose Lumeras, Destacados</div>
+					</div>
+					<div role="tabpanel" class="tab-pane active" id="comments">
+						<button class="black-button vermas" data-toggle="modal" data-target="#commentModal">Añadir comentario</button>
+						<div class="vpage__comments__published">
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
 								</div>
-								<div class="rank-number">56</div><div class="rank-arrow">▴</div>
-								<div class="total-rank">de 6534</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+							</div>
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+							</div>
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+								<div class="comment__item__reply">
+									<div class="comment__item__image">
+										<img src="img/comment_author.jpg" alt="Autor">
+									</div>
+									<div class="reply-wrapper">
+										<div class="comment__item__author">Enrique Enri</div>
+										<div class="comment__item__time">25 minutos</div>
+										<div class="comment__item__text">
+											Gracias!.
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-9 stats__breakdown">
-						<div class="container-fluid">
-							<div class="user__stats__item col-md-3 col-xs-6 col-md-offset-1">
-								<div class="stat__icon"><img src="img/stats_comments.png" alt="Comments"></div>
-								<strong>34</strong>Comentarios
+					<div role="tabpanel" class="tab-pane" id="other">
+						<p class="vpage__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil labore cum, debitis veritatis accusantium deleniti quae cumque culpa neque quis, porro nostrum, dolore odit atque optio suscipit quia quisquam. Nesciunt.</p>
+					</div>
+				</div>
+			</div>
+
+				<div class="row">
+					<div class="col-md-8 vpage__comments hidden-sm hidden-xs">
+						<h3 class="vpage__comments__number">12 comentarios</h3>
+						<div class="vpage__comments__new">
+							<form action="">
+								<div class="vpage__comments__box">
+									<div class="comment__blocker"><strong class="conduit">Accede</strong> para poder comentar</div>
+									<textarea class="comment__textarea" name="comment" id="comment"></textarea>
+								</div>
+								<div class="vpage__comments__notify">
+									<input type="checkbox" name="notifycomment" id="notifycomment">
+									<label for="notifycomment">Notificar la actividad via Email</label>
+								</div>
+								<div class="vpage__comments__post"><button class="black-button">Publicar</button></div>
+							</form>
+						</div>
+						<div class="vpage__comments__published">
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+								<div class="comment__item__vote">
+									<span class="vote__text">+4</span>
+									<a href="#" class="voteicon like"></a>
+									<a href="#" class="voteicon dislike"></a>
+								</div>
 							</div>
-							<div class="user__stats__item col-md-3 col-xs-6">
-								<div class="stat__icon"><img src="img/stats_views.png" alt="Visualizaciones"></div>
-								<strong>234</strong>Visualizaciones
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+								<div class="comment__item__vote">
+									<span class="vote__text">+4</span>
+									<a href="#" class="voteicon like"></a>
+									<a href="#" class="voteicon dislike"></a>
+								</div>
 							</div>
-							<div class="user__stats__item col-md-3 col-xs-6">
-								<div class="stat__icon"><img src="img/stats_karma.png" alt="Karma"></div>
-								<strong>+23</strong>Karma
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+								<div class="comment__item__reply">
+									<div class="comment__item__image">
+										<img src="img/comment_author.jpg" alt="Autor">
+									</div>
+									<div class="reply-wrapper">
+										<div class="comment__item__author">Enrique Enri</div>
+										<div class="comment__item__time">25 minutos</div>
+										<div class="comment__item__text">
+											Gracias!.
+										</div>
+									</div>
+								</div>
+								<div class="comment__item__vote">
+									<span class="vote__text">+4</span>
+									<a href="#" class="voteicon like"></a>
+									<a href="#" class="voteicon dislike"></a>
+								</div>
 							</div>
-							<div class="user__stats__item col-md-3 col-xs-6 col-md-offset-1">
-								<div class="stat__icon"><img src="img/stats_replies.png" alt="Respuestas"></div>
-								<strong>12</strong>Respuestas
-							</div>
-							<div class="user__stats__item col-md-3 col-xs-6">
-								<div class="stat__icon"><img src="img/stats_ratings.png" alt="Valoraciones"></div>
-								<strong>56</strong>Valoraciones
-							</div>
-							<div class="user__stats__item col-md-3 col-xs-6">
-								<div class="stat__icon"><img src="img/stats_authored.png" alt="Autor"></div>
-								<strong>1</strong>Autor
+							<div class="comment__item">
+								<div class="comment__item__image">
+									<img src="img/comment_author.jpg" alt="Autor">
+								</div>
+								<div class="comment__item__author">Iago Aspas</div>
+								<div class="comment__item__time">25 minutos</div>
+								<div class="comment__item__text">
+									Muy interesante vídeo y gran profesional. Saludos desde Oviedo.
+								</div>
+								<div class="comment__item__vote">
+									<span class="vote__text">+4</span>
+									<a href="#" class="voteicon like"></a>
+									<a href="#" class="voteicon dislike"></a>
+								</div>
 							</div>
 						</div>
+					</div>
+					<div class="col-md-4 vpage__more hidden-sm hidden-xs">
+						<h3 class="vpage__more__title">Más vídeos de <strong class="conduit">opinión</strong></h3>
+						<div class="video__item">
+							<div class="video__item__image">
+								<div class="video__item__play"></div>
+								<div class="video__item__overlay"></div>
+								<div class="video__item__meta hidden-sm">
+									<div class="video__icon i-time"></div> 2:30
+									<div class="video__icon i-rating"></div> 3,4
+									<div class="video__icon i-comments"></div> 10
+								</div>
+								<div class="video__item__share">
+									<div class="i-share video__icon"></div> Compartir
+								</div>
+								<img src="img/video_th_3.jpg" alt="">
+							</div>
+							<h3 class="video__item__title hidden-sm">Empresas y profesionales. Cambios contables</h3>
+							<div class="video__item__author hidden-sm">por <strong class="conduit">Oriol Amat</strong></div>
+							<div class="video__item__date hidden-sm">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+						</div>
+						<div class="video__item">
+							<div class="video__item__image">
+								<div class="video__item__play"></div>
+								<div class="video__item__overlay"></div>
+								<div class="video__item__meta hidden-sm">
+									<div class="video__icon i-time"></div> 2:30
+									<div class="video__icon i-rating"></div> 3,4
+									<div class="video__icon i-comments"></div> 10
+								</div>
+								<div class="video__item__share">
+									<div class="i-share video__icon"></div> Compartir
+								</div>
+								<img src="img/topv_th_1.jpg" alt="">
+							</div>
+							<h3 class="video__item__title hidden-sm">Prevención del blanqueo de capitales</h3>
+							<div class="video__item__author hidden-sm">por <strong class="conduit">Javier Frutos</strong></div>
+							<div class="video__item__date hidden-sm">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+						</div>
+						<div class="video__item">
+							<div class="video__item__image">
+								<div class="video__item__play"></div>
+								<div class="video__item__overlay"></div>
+								<div class="video__item__meta hidden-sm">
+									<div class="video__icon i-time"></div> 2:30
+									<div class="video__icon i-rating"></div> 3,4
+									<div class="video__icon i-comments"></div> 10
+								</div>
+								<div class="video__item__share">
+									<div class="i-share video__icon"></div> Compartir
+								</div>
+								<img src="img/video_th_2.jpg" alt="">
+							</div>
+							<h3 class="video__item__title hidden-sm">Diagnosticando la realidad económica</h3>
+							<div class="video__item__author hidden-sm">por <strong class="conduit">José Mª Gay de Liébana</strong></div>
+							<div class="video__item__date hidden-sm">·&nbsp;&nbsp;&nbsp;&nbsp;26 SEP 2014</div>
+						</div>
+						<button class="black-button vermas">Cargar más</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="user__ranking">
-			<div class="container">
-				<h2 class="user__ranking__title">Ranking de usuarios</h2>
-				<div class="row ranked__user rank__top3 user__rank1">
-					<div class="col-md-2 col-xs-2">
-						<div class="rank__number">1</div>
-						<div class="ranked__user__image"><img src="img/user_rank_1.jpg" alt=""></div>
-					</div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user rank__top3 user__rank2">
-					<div class="col-md-2 col-xs-2">
-						<div class="rank__number">2</div>
-						<div class="ranked__user__image"><img src="img/user_rank_2.jpg" alt=""></div>
-					</div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user rank__top3 user__rank3">
-					<div class="col-md-2 col-xs-2">
-						<div class="rank__number">3</div>
-						<div class="ranked__user__image"><img src="img/user_rank_3.jpg" alt=""></div>
-					</div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">4</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">5</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">6</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">7</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">8</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">9</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-				<div class="row ranked__user">
-					<div class="col-md-2 col-xs-2"><div class="rank__number">10</div></div>
-					<div class="col-md-3 col-xs-6 rank__name">Gustavo Castro</div>
-					<div class="col-md-3 rank__workplace hidden-sm hidden-xs">Castro &amp; Castro</div>
-					<div class="col-md-2 rank__karma hidden-sm hidden-xs"><div class="string"><strong>+235</strong> Karma</div></div>
-					<div class="col-md-2 col-xs-4 rank__points"><div class="string"><strong>10456</strong> Pts.</div></div>
-				</div>
-			</div>
-		</div>
-		<button class="black-button vermas">Cargar más</button>
 	</div>
 	
 	<footer>
@@ -717,6 +708,25 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content comment-modal">
+				<a href="#" class="close-modal" data-dismiss="modal"><img src="img/icon_close_modal_black.png" alt=""></a>
+				<h3 class="login-modal__title">Haz un comentario</h3>
+				<div class="commentModal__vinfo">
+					<img src="img/modal_thumb.jpg" alt="" class="commentModal__vinfo__image">
+					<div class="commentModal__vinfo__text">La inteligencia contable aporta rentabilidad, productividad y satisfacción a tus clientes...</div>
+				</div>
+				<form action="">
+					<textarea name="modalcomment" id="modalcomment" class="commentModal__comment" placeholder="Pulsa para añadir tu comentario"></textarea>
+					<div class="commentModal__notify">
+						<input type="checkbox" name="commentModal_notify" id="commentModal_notify"><label for="commentModal_notify">Notificarme vía Email</label>
+					</div>
+					<button class="black-button vermas">ENVIAR</button>
+				</form>
+			</div>
+		</div>
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -755,8 +765,6 @@
                   "border-full"
                ]
             });
-
-            // $('#loginModal').modal('show');
 
             // ACTUALLY REAL JS THAT NEEDS TO STAY
 
